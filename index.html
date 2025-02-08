@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEOWNAD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <img src="assets/meownad-logo.jpg" alt="MEOWNAD Logo" class="logo">
+      <button id="connect-btn" class="btn connect-wallet">
+        <img src="assets/cat-connect.jpg" alt="Connect Wallet" class="cat-icon"> Connect Wallet
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1>MEOWNAD</h1>
+      <p>A Token Experiment on Monad Testnet</p>
+    </div>
+  </section>
+
+  <!-- Wallet Info -->
+  <section id="wallet-info" class="card" style="display: none;">
+    <div class="container">
+      <h2>Wallet Info</h2>
+      <p>Wallet Address: <span id="wallet-address"></span></p>
+      <p>MEOWNAD Balance: <span id="meownad-balance">0</span> MEOWNAD</p>
+    </div>
+  </section>
+
+  <!-- Faucet Section -->
+  <section id="faucet" class="card">
+    <div class="container">
+      <h2>Faucet</h2>
+      <p>Drip Amount: <span id="faucet-drip">Loading...</span> MEOWNAD</p>
+      <p>Limit: <span id="faucet-limit">Loading...</span> MEOWNAD</p>
+      <p>Remaining Supply: <span id="remaining-supply">Loading...</span> MEOWNAD</p>
+      <p>Time Until Next Claim: <span id="claim-countdown">Loading...</span></p>
+      <button id="claim-btn" class="btn faucet">
+        <img src="assets/cat-faucet.jpg" alt="Claim Tokens" class="cat-icon"> Claim Testnet Tokens
+      </button>
+    </div>
+  </section>
+
+  <!-- Staking Section -->
+  <section id="staking" class="card">
+    <div class="container">
+      <h2>Staking</h2>
+      <input type="number" id="stake-amount" placeholder="Enter amount to stake" />
+      <button id="stake-btn" class="btn stake">
+        <img src="assets/cat-stake.jpg" alt="Stake Tokens" class="cat-icon"> Stake Tokens
+      </button>
+      <p>APY: 5%</p>
+    </div>
+  </section>
+
+  <!-- Transaction History Section -->
+  <section id="transaction-history" class="card">
+    <div class="container">
+      <h2>Transaction History</h2>
+      <ul id="transactions">
+        <!-- Transactions will be dynamically added here -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- Include ethers.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6"></script>
+  <script src="script.js"></script>
+</body>
+</html>
